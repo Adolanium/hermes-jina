@@ -1,0 +1,16 @@
+name: hermes-jina
+version: "0.1.0"
+description: "Jina Reader web backend: web_extract through r.jina.ai (works without a key) and web_search through s.jina.ai (needs JINA_API_KEY). Unofficial; not affiliated with Jina AI."
+author: Adolanium
+license: MIT
+homepage: https://github.com/Adolanium/hermes-jina
+manifest_version: 1
+kind: backend
+requires_hermes: ">=0.21.6"
+provides_web_providers:
+  - jina
+requires_env:
+  - name: JINA_API_KEY
+    description: "Jina API key. Optional for web_extract (keyless Reader is rate-limited); required for web_search."
+    url: https://jina.ai/api-dashboard/
+    secret: true
